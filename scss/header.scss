@@ -1,0 +1,75 @@
+$fz: 25px;
+%ffPlayfair {
+	font-family: Playfair Display;
+	font-weight: bold;
+}
+.header {
+	&__container {
+		max-width: 1110px;
+		margin: 0px auto 56px;
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		padding: 0px 20px 0px 0px;
+		font-size: $fz;
+		line-height: 32px;
+		color: #10375c;
+		margin-top: 66px;
+		@extend %ffPlayfair;
+	}
+
+	&__menu {
+	}
+
+	&__row {
+	}
+
+	&__list {
+		margin-top: 73px;
+		li {
+			display: inline-block;
+			font-family: Lato;
+			font-size: 16px;
+			line-height: 28px;
+			margin-right: 41px;
+			&:last-child {
+				margin-right: 0px;
+			}
+			&:hover {
+				text-decoration: underline;
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__form {
+		display: flex;
+		margin-top: 61px;
+		padding: 0px 0px 0px 40px;
+		@extend %ffPlayfair;
+	}
+
+	&__log-in {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 12px 24px;
+		color: #ff5722;
+	}
+
+	&__sign-up {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 12px 24px;
+		color: #fff;
+		background: #ff5722;
+		box-shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);
+	}
+}

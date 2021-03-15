@@ -1,0 +1,310 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "";
+//</Шрифт по умолчанию>==========================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	font-size: 14px;
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "header";
+@import "footer";
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.news {
+	&__container {
+		max-width: 1110px;
+		margin: 30px auto;
+	}
+	&__flex-block {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex: 0 1 1110px;
+	}
+	&__for-you {
+		@include Lora(700, 40px, 51px, #10375c);
+		margin: 0px 0px 56px 0px;
+	}
+
+	&__block-big {
+		display: flex;
+		flex-direction: row;
+		flex: 0 1 730px;
+		margin: 0px 30px 30px 0px;
+	}
+	&__container-big {
+		padding: 32px;
+	}
+
+	&__img-big {
+	}
+
+	&__item-big {
+	}
+
+	&__title {
+		@include Lora(700, 32px, 41px, #222831);
+		margin-bottom: 24px;
+	}
+
+	&__subtitle {
+		@include Lato(400, 16px, 26px, #9a9a9a);
+		margin-bottom: 16px;
+	}
+
+	&__about {
+		display: flex;
+	}
+	&__img {
+		padding: 0px 23px 0px 0px;
+	}
+	&__name {
+		@include Lato(500, 18px, 28px, #10375c);
+	}
+
+	&__proffesional {
+		@include Lato(400, 16px, 26px, #9a9a9a);
+	}
+
+	&__block-others {
+		max-width: 350px;
+	}
+	&__block-others:nth-child(4) {
+		margin: 0px 30px;
+	}
+
+	&__otgers-img {
+	}
+
+	&__text {
+		@include Lora(400, 22px, 28px, #222831);
+		padding: 14px 16px 0px 16px;
+	}
+
+	&__who {
+		@include Lato(500, 16px, 26px, #9a9a9a);
+		margin: 4px 0px 16px 16px;
+	}
+}
+
+// ВТОРОЙ ВАРИАНТ
+.news-2 {
+	&__container {
+		max-width: 1110px;
+		margin: 30px auto;
+	}
+
+	&__for-you {
+		@include Lora(700, 40px, 51px, #10375c);
+		margin: 0px 0px 56px 0px;
+	}
+
+	&__flex-block {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex: 0 1 1110px;
+	}
+
+	&__block-big {
+		display: flex;
+		flex-direction: row;
+		flex: 0 1 1110px;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__img-big {
+	}
+
+	&__container-big {
+		padding: 32px;
+	}
+
+	&__item-big {
+	}
+
+	&__title {
+		@include Lora(700, 32px, 41px, #222831);
+		margin-bottom: 24px;
+	}
+
+	&__subtitle {
+		@include Lato(400, 16px, 26px, #9a9a9a);
+		margin-bottom: 16px;
+	}
+	&__about {
+		display: flex;
+	}
+	&__img {
+		padding: 0px 23px 0px 0px;
+	}
+
+	&__name {
+		@include Lato(500, 18px, 28px, #10375c);
+	}
+
+	&__proffesional {
+		@include Lato(400, 16px, 26px, #9a9a9a);
+	}
+
+	&__block-big-2 {
+	}
+
+	&__otgers-img {
+	}
+
+	&__text {
+		@include Lora(400, 22px, 28px, #222831);
+		padding: 14px 16px 0px 16px;
+	}
+
+	&__who {
+		@include Lato(500, 16px, 26px, #9a9a9a);
+		margin: 4px 0px 16px 16px;
+	}
+
+	&__block-three {
+		display: flex;
+		flex: 0 1 33.333%;
+	}
+
+	&__block-others {
+		margin: 0px 30px 0px 0px;
+	}
+	&__block-others:last-child {
+		margin-right: 0px;
+	}
+}
+
+.about {
+	&__container {
+		max-width: 1110px;
+		margin: 0 auto;
+	}
+
+	&__block-glavnyk {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__block-left {
+		flex: 0 0 50%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__left {
+		margin-right: 117px;
+	}
+	&__img {
+		padding: 0px 24px 0px 0px;
+	}
+
+	&__little {
+		display: flex;
+		flex: 0 1 191px;
+		margin-bottom: 64px;
+	}
+	&__little:last-child {
+		flex: 0 1 191px;
+		margin-bottom: 0px;
+	}
+
+	&__statistik {
+		@include Lora(400, 32px, 41px, #10375c);
+		margin-bottom: 8px;
+	}
+
+	&__sub-statictik {
+		@include Lora(400, 16px, 26px, #9a9a9a);
+	}
+
+	&__right {
+	}
+
+	&__information-right {
+		flex: 0 0 50%;
+		background-color: #10375c;
+	}
+
+	&__right-information {
+		padding: 54px;
+	}
+
+	&__title {
+		@include Lora(500, 20px, 30px, #ffffff);
+		margin-bottom: 8px;
+	}
+	&__title::after {
+		content: "";
+		display: inline-block;
+		background: #ffffff;
+		width: 73px;
+		height: 2px;
+		margin-left: 15px;
+		vertical-align: middle;
+	}
+
+	&__sub-titile {
+		@include Lora(700, 40px, 51px, #ffffff);
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		@include Lato(500, 20px, 30px, #ffffff);
+	}
+}
+
+.item {
+	&__container {
+		max-width: 1110px;
+		margin: 30px auto;
+	}
+	&__flex-block {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__title {
+		@include Lora(500, 20px, 30px, #222831);
+		margin-bottom: 6px;
+	}
+	&__title::after {
+		content: "";
+		display: inline-block;
+		background: #222831;
+		width: 73px;
+		height: 2px;
+		margin-left: 15px;
+		vertical-align: middle;
+	}
+
+	&__block-1 {
+		flex: 0 0 667px;
+		margin-right: 61px;
+		@include Lora(700, 52px, 67px, #10375c);
+	}
+	.span {
+		color: red;
+	}
+
+	&__block-2 {
+		@include Lato(500, 20px, 30px, #6a6a6a);
+	}
+}
